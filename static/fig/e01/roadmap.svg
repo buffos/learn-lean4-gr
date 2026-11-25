@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" width="720" font-family="Noto Sans, sans-serif">
+  <defs><marker id="rm-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#adb5bd"/></marker></defs>
+  <rect width="720" height="360" fill="#fff"/>
+  <!-- σειρά 1 -->
+  <rect x="20" y="20" width="210" height="140" rx="0" fill="#fdecea" stroke="#e5322d" stroke-width="2.5"/>
+  <text x="125" y="48" text-anchor="middle" font-weight="700" fill="#e5322d">Θεμέλια</text>
+  <text x="38" y="78" font-size="13" fill="#1f2430" font-weight="600">1.1  Τι είναι ένα term</text>
+  <text x="38" y="100" font-size="13" fill="#1f2430" font-weight="600">1.2  Οι τύποι είναι terms</text>
+  <text x="38" y="122" font-size="13" fill="#868e96">1.3  Sorts και Universes</text>
+
+  <rect x="255" y="20" width="210" height="140" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.5"/>
+  <text x="360" y="48" text-anchor="middle" font-weight="700" fill="#495057">Context &amp; Environment</text>
+  <text x="273" y="78" font-size="13" fill="#868e96">1.4  Το context Γ</text>
+  <text x="273" y="100" font-size="13" fill="#868e96">1.5  Εγκυρότητα του context</text>
+  <text x="273" y="122" font-size="13" fill="#868e96">1.6  Environment, constants</text>
+  <text x="273" y="144" font-size="13" fill="#868e96">1.7  Literal rule</text>
+
+  <rect x="490" y="20" width="210" height="140" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.5"/>
+  <text x="595" y="48" text-anchor="middle" font-weight="700" fill="#495057">Function types</text>
+  <text x="508" y="78" font-size="13" fill="#868e96">1.8  Function types</text>
+  <text x="508" y="100" font-size="13" fill="#868e96">1.9  Εσωτερική αναπαράσταση</text>
+  <text x="508" y="122" font-size="13" fill="#868e96">1.10 Typing rule (Π)</text>
+  <text x="508" y="144" font-size="13" fill="#868e96">1.11 Dependent Π-types</text>
+
+  <!-- σειρά 2 -->
+  <rect x="490" y="200" width="210" height="140" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.5"/>
+  <text x="595" y="228" text-anchor="middle" font-weight="700" fill="#495057">Μεταβλητές &amp; λ</text>
+  <text x="508" y="256" font-size="13" fill="#868e96">1.12–1.13 De Bruijn, scope</text>
+  <text x="508" y="278" font-size="13" fill="#868e96">1.14–1.15 Lambda</text>
+  <text x="508" y="300" font-size="13" fill="#868e96">1.16–1.17 Application</text>
+  <text x="508" y="322" font-size="13" fill="#868e96">1.18–1.20 let</text>
+
+  <rect x="255" y="200" width="210" height="140" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.5"/>
+  <text x="360" y="228" text-anchor="middle" font-weight="700" fill="#495057">Substitution</text>
+  <text x="273" y="256" font-size="13" fill="#868e96">1.21 Variable capture</text>
+  <text x="273" y="278" font-size="13" fill="#868e96">1.22 Index shifting</text>
+  <text x="273" y="300" font-size="13" fill="#868e96">1.23–1.24 Substitution</text>
+  <text x="273" y="322" font-size="13" fill="#868e96">1.25 Στην πράξη</text>
+
+  <rect x="20" y="200" width="210" height="140" rx="0" fill="#ffffff" stroke="#111111" stroke-width="1.5"/>
+  <text x="125" y="228" text-anchor="middle" font-weight="700" fill="#495057">Universes</text>
+  <text x="38" y="256" font-size="13" fill="#868e96">1.26 Universe polymorphism</text>
+
+  <g stroke="#adb5bd" stroke-width="2" fill="none" marker-end="url(#rm-a)">
+    <path d="M232 90 H251"/><path d="M467 90 H486"/>
+    <path d="M595 162 V196"/>
+    <path d="M488 270 H469"/><path d="M253 270 H234"/>
+  </g>
+</svg>

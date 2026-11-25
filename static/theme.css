@@ -1,0 +1,445 @@
+/* ==========================================================
+   learn-lean4-gr — Editorial / Swiss θέμα πάνω από το Verso
+   Αρχές: μία οικογένεια sans, αυστηρή ιεραρχία μεγεθών,
+   μαύρο-λευκό + ένα χρώμα έμφασης, γραμμές αντί για κουτιά.
+   ========================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap");
+
+:root {
+  color-scheme: dark;
+  --ink: #e8e6e1;
+  --ink-2: #b9b6ae;
+  --ink-3: #85827a;
+  --rule: #e8e6e1;
+  --hair: #34332f;
+  --paper: #141413;
+  --tint: #1d1d1b;
+  --accent: #ff5a4f;          /* ελβετικό κόκκινο, φωτεινότερο για σκούρο φόντο */
+  --green: #5fd38a;
+  --blue: #6aa8ff;
+  --purple: #b99bff;
+  --amber: #ffb454;
+  --teal: #4fd1c5;
+
+  --verso-text-font-family: "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --verso-structure-font-family: "Inter Tight", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
+  --verso-code-font-family: "JetBrains Mono", Consolas, monospace;
+  --verso-font-size: 17px;
+  --verso-content-max-width: 44rem;
+  --verso-header-height: 3.25rem;
+  --verso-text-color: var(--ink);
+  --verso-background-color: var(--paper);
+  --verso-selected-color: #2a2a27;
+  --verso-muted-color: var(--ink-3);
+  --verso-toc-background-color: var(--paper);
+  --verso-toc-text-color: var(--ink-2);
+  --verso-toc-border-color: var(--hair);
+  --verso-toc-width: 17rem;
+  --verso-burger-toc-hidden-color: var(--ink);
+  --verso-burger-toc-hidden-shadow-color: transparent;
+  --verso-burger-toc-visible-shadow-color: transparent;
+
+  /* κώδικας Lean */
+  --verso-code-color: var(--ink);
+  --verso-code-keyword-color: #ff7b72;
+  --verso-code-const-color: #79c0ff;
+  --verso-code-var-color: #ffa657;
+  --verso-code-hover-bg-color: #2a2a27;
+  /* tooltips & μηνύματα */
+  --verso-tooltip-color: var(--ink);
+  --verso-tooltip-bg-color: #23231f;
+  --verso-tooltip-border-color: #3d3c37;
+  --verso-tooltip-error-bg-color: #23231f;
+  --verso-tooltip-error-color: var(--ink);
+  --verso-tooltip-warning-bg-color: #23231f;
+  --verso-tooltip-warning-color: var(--ink);
+  --verso-tooltip-info-bg-color: #23231f;
+  --verso-tooltip-info-color: var(--ink);
+  --verso-tactic-state-bg-color: #1d1d1b;
+  --verso-tactic-state-color: var(--ink);
+  --verso-tactic-state-border-color: #3d3c37;
+  --verso-message-error-color: #ff8b82;
+  --verso-error-indicator-color: var(--accent);
+  --verso-info-indicator-color: var(--blue);
+  --verso-warning-indicator-color: var(--amber);
+}
+
+html, body { background: var(--paper); }
+body { color: var(--ink); line-height: 1.72; }
+
+/* ---------- Header: λεπτή μπάρα, wordmark αριστερά ---------- */
+header {
+  border-bottom: 1px solid var(--rule) !important;
+  box-shadow: none !important;
+  background: var(--paper) !important;
+}
+.header-title h1 {
+  font-family: var(--verso-structure-font-family) !important;
+  font-size: 1.05rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.header-title h1::before {
+  content: "";
+  display: inline-block;
+  width: 0.7em; height: 0.7em;
+  background: var(--accent);
+  margin-right: 0.55em;
+  vertical-align: 0.02em;
+}
+header input, header .search-wrapper input, #search-wrapper input {
+  border: 0 !important;
+  border-bottom: 1px solid var(--rule) !important;
+  border-radius: 0 !important;
+  font-family: var(--verso-structure-font-family);
+}
+
+/* ---------- Πλαϊνό μενού ---------- */
+#toc {
+  border-right: 1px solid var(--hair) !important;
+  font-family: var(--verso-structure-font-family);
+  font-size: 0.9rem;
+}
+#toc .toc-title h1 { display: none; }
+#toc a, #toc a:visited {
+  color: var(--ink-2);
+  text-decoration: none !important;
+  border: 0 !important;
+}
+#toc a:hover { color: var(--accent); }
+#toc .split-toc .title {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  border-bottom: 1px solid var(--hair);
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+#toc .split-toc .title a { color: var(--ink-3); }
+#toc .split-toc td { padding: 0.28rem 0; line-height: 1.35; }
+#toc .split-toc .current td:not(.num), #toc .split-toc .title .current,
+#toc .split-toc .current a {
+  color: var(--ink) !important;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+#toc .split-toc tr.current td:not(.num) { box-shadow: inset 3px 0 0 var(--accent); padding-left: 0.6rem; }
+#meta-links a { color: var(--ink-3); font-size: 0.8rem; text-decoration: none; }
+
+/* ---------- Κείμενο ---------- */
+main a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+main a:hover { color: var(--accent); }
+main strong { font-weight: 700; }
+main p, main li { color: var(--ink); }
+
+/* ---------- Τίτλοι ---------- */
+main h1, main h2, main h3, main h4 {
+  font-family: var(--verso-structure-font-family);
+  color: var(--ink);
+}
+main h1 {
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  margin: 1.5rem 0 2rem;
+  padding-top: 1.2rem;
+  border-top: 6px solid var(--rule);
+  border-bottom: 0;
+  display: block;
+}
+main h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-top: 3.2rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid var(--rule);
+}
+main h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+}
+main h1 a.permalink, main h2 a.permalink, main .permalink-widget a { text-decoration: none; opacity: 0.25; }
+
+/* ---------- Κουμπιά προηγ./επόμ. ---------- */
+.prev-next-buttons { gap: 0 !important; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin: 0.5rem 0 1rem; }
+.prev-next-buttons > * {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  font-family: var(--verso-structure-font-family);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.65rem 0 !important;
+  color: var(--ink) !important;
+  text-decoration: none !important;
+}
+.prev-next-buttons > [rel=next] { border-left: 1px solid var(--hair) !important; padding-left: 1rem !important; }
+.prev-next-buttons > *:hover { color: var(--accent) !important; }
+
+/* ---------- Κώδικας ---------- */
+main pre, main .hl.lean.block {
+  background: var(--tint) !important;
+  border: 0;
+  border-left: 3px solid var(--ink);
+  border-radius: 0;
+  padding: 0.85rem 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+main :not(pre) > code:not(.math) {
+  background: var(--tint);
+  border-radius: 0;
+  padding: 0.05em 0.3em;
+  font-size: 0.86em;
+}
+/* έξοδος Lean */
+main .lean-output, main pre.lean-output, main .hl.lean.lean-output {
+  background: var(--paper) !important;
+  border: 1px solid var(--hair) !important;
+  border-left: 3px solid var(--green) !important;
+  border-radius: 0 !important;
+}
+main .lean-output.error, main pre.error, main .error.lean-output {
+  border-left-color: var(--accent) !important;
+  color: var(--verso-message-error-color);
+}
+
+/* ---------- Μαθηματικά ---------- */
+main code.math { background: none !important; padding: 0; border: 0; }
+main p:has(> code.math.display) {
+  text-align: center;
+  margin: 1.6rem 0;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+}
+.katex { font-size: 1.1em; }
+
+/* ---------- Πίνακες ---------- */
+main table {
+  border-collapse: collapse;
+  margin: 1.6rem 0;
+  font-size: 0.93rem;
+  width: 100%;
+}
+main table td, main table th {
+  border: 0;
+  border-bottom: 1px solid var(--hair);
+  padding: 0.55rem 0.8rem 0.55rem 0;
+  text-align: left;
+  vertical-align: top;
+  background: none;
+}
+main table th {
+  font-family: var(--verso-structure-font-family);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  border-bottom: 2px solid var(--rule);
+  background: none;
+}
+
+/* ---------- Πλαίσια: γραμμή + ετικέτα, όχι κουτιά ---------- */
+.callout {
+  --c: var(--ink);
+  margin: 2.2rem 0;
+  padding: 0.2rem 0 0.2rem 1.25rem;
+  border-left: 3px solid var(--c);
+  background: none;
+}
+.callout-title {
+  font-family: var(--verso-structure-font-family);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c);
+  margin-bottom: 0.35rem;
+}
+.callout-icon { display: none; }
+.callout-body > :first-child { margin-top: 0; }
+.callout-body > :last-child { margin-bottom: 0; }
+
+.callout-goals {
+  --c: var(--ink);
+  border-left: 0;
+  padding: 1rem 1.25rem;
+  background: var(--tint);
+  border-top: 3px solid var(--ink);
+}
+.callout-summary {
+  --c: var(--ink);
+  border-left: 0;
+  padding: 1rem 0 0;
+  border-top: 6px solid var(--ink);
+}
+.callout-tip      { --c: var(--blue); }
+.callout-note     { --c: var(--ink-2); }
+.callout-mistake  { --c: var(--accent); }
+.callout-mistake .callout-title::before { content: "✕  "; }
+.callout-exercise { --c: var(--green); }
+.callout-deep     { --c: var(--purple); }
+
+/* ---------- Λύσεις ---------- */
+details.solution {
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  margin: 1rem 0 0.4rem;
+  background: none;
+}
+details.solution > summary {
+  cursor: pointer;
+  padding: 0.55rem 0;
+  font-family: var(--verso-structure-font-family);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green);
+  list-style: none;
+}
+details.solution > summary::-webkit-details-marker { display: none; }
+details.solution > summary::before { content: "+ "; }
+details.solution[open] > summary::before { content: "− "; }
+details.solution .solution-body { padding: 0.2rem 0 1rem; }
+
+/* ---------- Σχήματα ---------- */
+figure.lesson-figure { margin: 2.4rem 0; }
+figure.lesson-figure svg { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+figure.lesson-figure figcaption {
+  font-family: var(--verso-structure-font-family);
+  font-size: 0.8rem;
+  color: var(--ink-3);
+  margin-top: 0.7rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--hair);
+}
+figure.lesson-figure figcaption::before {
+  content: "Σχήμα — ";
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ---------- Blockquote ---------- */
+main blockquote {
+  margin: 1.4rem 0;
+  padding: 0 0 0 1.25rem;
+  border-left: 3px solid var(--accent);
+  font-size: 1.08rem;
+  font-style: italic;
+  color: var(--ink-2);
+}
+
+
+/* ---------- Verso: σκούρες επιφάνειες ---------- */
+header, #toc, .toc-backdrop, .with-toc { background: var(--paper) !important; }
+#search-wrapper input, header input { background: transparent !important; color: var(--ink) !important; }
+.tippy-box { box-shadow: 0 8px 24px rgba(0,0,0,.5); }
+main hr { border-color: var(--hair); }
+::selection { background: color-mix(in srgb, var(--accent) 40%, transparent); }
+
+/* ---------- Σχήματα SVG: ξαναβάψιμο για σκούρο φόντο ---------- */
+figure.lesson-figure svg rect[fill="#fff"], figure.lesson-figure svg rect[fill="#ffffff"] { fill: transparent; }
+figure.lesson-figure svg [fill="#1f2430"], figure.lesson-figure svg [fill="#111111"] { fill: var(--ink); }
+figure.lesson-figure svg [fill="#5b6475"], figure.lesson-figure svg [fill="#868e96"],
+figure.lesson-figure svg [fill="#495057"], figure.lesson-figure svg [fill="#adb5bd"] { fill: var(--ink-3); }
+figure.lesson-figure svg [stroke="#111111"], figure.lesson-figure svg [stroke="#1f2430"] { stroke: var(--ink-3); }
+figure.lesson-figure svg [stroke="#5b6475"], figure.lesson-figure svg [stroke="#868e96"],
+figure.lesson-figure svg [stroke="#adb5bd"] { stroke: var(--ink-3); }
+figure.lesson-figure svg [stroke="#e3e5ea"] { stroke: var(--hair); }
+/* χρώματα έμφασης */
+figure.lesson-figure svg [fill="#e5322d"], figure.lesson-figure svg [fill="#e03131"] { fill: var(--accent); }
+figure.lesson-figure svg [stroke="#e5322d"], figure.lesson-figure svg [stroke="#e03131"] { stroke: var(--accent); }
+figure.lesson-figure svg [fill="#0c8599"] { fill: var(--teal); }
+figure.lesson-figure svg [stroke="#0c8599"] { stroke: var(--teal); }
+figure.lesson-figure svg [fill="#d9480f"] { fill: var(--amber); }
+figure.lesson-figure svg [stroke="#d9480f"] { stroke: var(--amber); }
+figure.lesson-figure svg [fill="#5f3dc4"] { fill: var(--purple); }
+figure.lesson-figure svg [stroke="#5f3dc4"] { stroke: var(--purple); }
+figure.lesson-figure svg [fill="#2b8a3e"] { fill: var(--green); }
+figure.lesson-figure svg [stroke="#2b8a3e"] { stroke: var(--green); }
+/* απαλά φόντα κουτιών → σκούρες αποχρώσεις */
+figure.lesson-figure svg rect[fill="#fdecea"], figure.lesson-figure svg rect[fill="#fff5f5"] { fill: #2a1716; }
+figure.lesson-figure svg rect[fill="#e8f8fa"] { fill: #12282a; }
+figure.lesson-figure svg rect[fill="#fff4e6"] { fill: #2b2112; }
+figure.lesson-figure svg rect[fill="#ebfbee"] { fill: #132717; }
+figure.lesson-figure svg rect[fill="#eef2ff"] { fill: #181d2e; }
+
+
+/* ==========================================================
+   Πλέγμα τριών στηλών: μενού | κείμενο (αριστερά) | σε αυτή τη σελίδα
+   ========================================================== */
+:root { --gutter: clamp(1.5rem, 4vw, 4.5rem); }
+
+/* Το κείμενο ευθυγραμμίζεται αριστερά, με σταθερό κενό από το μενού
+   (ακυρώνει το κεντράρισμα του Verso σε φαρδιές οθόνες). */
+main .content-wrapper {
+  margin: 0 0 0 var(--gutter) !important;
+  max-width: var(--verso-content-max-width) !important;
+}
+@media screen and (max-width: 700px) {
+  main .content-wrapper { margin: 0 !important; }
+}
+
+/* Ο τίτλος του header ακριβώς πάνω από τη στήλη του κειμένου */
+.header-title { margin: 0 !important; max-width: none !important; text-align: left !important; }
+.header-title h1 { text-align: left !important; margin: 0 !important; }
+@media screen and (min-width: 701px) {
+  .header-title-wrapper {
+    justify-content: flex-start !important;
+    padding-left: calc(var(--gutter) + var(--verso--content-padding-x, 1.5rem)) !important;
+  }
+}
+
+/* Δεξιά στήλη */
+.page-toc { display: none; }
+@media screen and (min-width: 1400px) {
+  .page-toc {
+    display: block;
+    position: fixed;
+    top: calc(var(--verso-header-height) + 2.2rem);
+    left: calc(var(--verso-toc-effective-width, var(--verso-toc-width)) + var(--gutter) + var(--verso--content-padding-x, 1.5rem) + var(--verso-content-max-width) + 3.5rem);
+    width: 15rem;
+    max-height: calc(100vh - var(--verso-header-height) - 4rem);
+    overflow-y: auto;
+    font-family: var(--verso-structure-font-family);
+    font-size: 0.85rem;
+    border-left: 1px solid var(--hair);
+    padding-left: 1.1rem;
+  }
+  .page-toc-title {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 0.7rem;
+  }
+  .page-toc ol { list-style: none; margin: 0; padding: 0; }
+  .page-toc li { margin: 0 0 0.55rem; line-height: 1.35; }
+  .page-toc a { color: var(--ink-3); text-decoration: none; transition: color .15s; }
+  .page-toc a:hover { color: var(--ink); }
+  .page-toc li.active { margin-left: -1.1rem; padding-left: calc(1.1rem - 2px); border-left: 2px solid var(--accent); }
+  .page-toc li.active a { color: var(--ink); font-weight: 600; }
+
+  /* τότε το αριστερό μενού δείχνει μόνο τα μαθήματα */
+  body.has-page-toc #toc .split-toc.page-local-toc { display: none; }
+}
+
+/* Κινητό: χώρος για το κουμπί ☰, μικρότερο πεδίο αναζήτησης */
+@media screen and (max-width: 700px) {
+  .header-title-wrapper { padding-left: 3.4rem !important; min-width: 0; }
+  .header-title h1 { font-size: 0.9rem !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #search-wrapper { max-width: 40vw; }
+}

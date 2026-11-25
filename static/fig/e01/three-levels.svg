@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 200" width="700" font-family="Noto Sans, sans-serif">
+  <defs><marker id="tl-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#5b6475"/></marker></defs>
+  <rect width="700" height="200" fill="#fff"/>
+  <text x="350" y="28" text-anchor="middle" font-size="15" fill="#5b6475">Το ταξίδι μιας έκφρασης μέσα στη Lean</text>
+  <rect x="20" y="50" width="190" height="90" rx="0" fill="#fdecea" stroke="#e5322d" stroke-width="2"/>
+  <text x="115" y="80" text-anchor="middle" font-weight="700" fill="#e5322d">Surface syntax</text>
+  <text x="115" y="112" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="15" fill="#1f2430">(42 : Nat)</text>
+  <text x="115" y="165" text-anchor="middle" font-size="13" fill="#5b6475">ό,τι γράφουμε εμείς</text>
+  <rect x="255" y="50" width="190" height="90" rx="0" fill="#e8f8fa" stroke="#0c8599" stroke-width="2"/>
+  <text x="350" y="80" text-anchor="middle" font-weight="700" fill="#0c8599">Elaborator</text>
+  <text x="350" y="104" text-anchor="middle" font-size="13" fill="#1f2430">συμπληρώνει, λύνει</text>
+  <text x="350" y="122" text-anchor="middle" font-size="13" fill="#1f2430">overloading → Expr</text>
+  <text x="350" y="165" text-anchor="middle" font-size="13" fill="#5b6475">έξυπνος, πολύπλοκος</text>
+  <rect x="490" y="50" width="190" height="90" rx="0" fill="#fff4e6" stroke="#d9480f" stroke-width="2"/>
+  <text x="585" y="80" text-anchor="middle" font-weight="700" fill="#d9480f">Kernel</text>
+  <text x="585" y="104" text-anchor="middle" font-size="13" fill="#1f2430">ελέγχει ότι το Expr</text>
+  <text x="585" y="122" text-anchor="middle" font-size="13" fill="#1f2430">έχει τύπο Nat</text>
+  <text x="585" y="165" text-anchor="middle" font-size="13" fill="#5b6475">μικρός, έμπιστος</text>
+  <path d="M212 95 H250" stroke="#5b6475" stroke-width="2" marker-end="url(#tl-a)"/>
+  <path d="M447 95 H485" stroke="#5b6475" stroke-width="2" marker-end="url(#tl-a)"/>
+</svg>

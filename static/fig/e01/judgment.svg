@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 230" width="720" font-family="Noto Sans, sans-serif">
+  <rect width="720" height="230" fill="#fff"/>
+  <text x="360" y="36" font-size="16" text-anchor="middle" fill="#5b6475">«Στο context Γ, το term t έχει τύπο T»</text>
+  <g font-family="Inter Tight, sans-serif" font-size="54" text-anchor="middle">
+    <text x="100" y="110" fill="#5f3dc4">Γ</text>
+    <text x="250" y="110" fill="#1f2430">⊢</text>
+    <text x="400" y="110" fill="#0c8599" font-style="italic">t</text>
+    <text x="490" y="110" fill="#1f2430">:</text>
+    <text x="590" y="110" fill="#d9480f" font-style="italic">T</text>
+  </g>
+  <g stroke-width="2" fill="none">
+    <path d="M100 125 v30" stroke="#5f3dc4"/>
+    <path d="M250 125 v30" stroke="#1f2430"/>
+    <path d="M400 125 v30" stroke="#0c8599"/>
+    <path d="M590 125 v30" stroke="#d9480f"/>
+  </g>
+  <g font-size="15" text-anchor="middle">
+    <text x="100" y="178" fill="#5f3dc4" font-weight="700">context</text>
+    <text x="100" y="198" fill="#5b6475">τι υποθέτουμε</text>
+    <text x="250" y="178" fill="#1f2430" font-weight="700">«τεκμηριώνεται»</text>
+    <text x="250" y="198" fill="#5b6475">με τους κανόνες</text>
+    <text x="400" y="178" fill="#0c8599" font-weight="700">term</text>
+    <text x="400" y="198" fill="#5b6475">η έκφραση</text>
+    <text x="590" y="178" fill="#d9480f" font-weight="700">type</text>
+    <text x="590" y="198" fill="#5b6475">ο τύπος της</text>
+  </g>
+</svg>

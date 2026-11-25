@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 330" width="560" font-family="JetBrains Mono, monospace">
+  <defs><marker id="tt-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker></defs>
+  <rect width="560" height="330" fill="#fff"/>
+  <g font-family="Noto Sans, sans-serif" font-size="13" fill="#5b6475">
+    <text x="20" y="62">τύποι τύπων</text>
+    <text x="20" y="172">τύποι</text>
+    <text x="20" y="282">τιμές</text>
+  </g>
+  <g stroke="#e3e5ea" stroke-dasharray="4 4"><path d="M10 110 H550"/><path d="M10 220 H550"/></g>
+  <g stroke="#868e96" stroke-width="1.8" marker-end="url(#tt-b)" fill="none">
+    <path d="M200 266 L236 194"/><path d="M272 266 L252 194"/>
+    <path d="M370 266 L388 194"/><path d="M452 266 L406 194"/>
+    <path d="M250 150 L318 82"/><path d="M394 150 L342 82"/>
+  </g>
+  <g text-anchor="middle" font-size="17">
+    <rect x="290" y="40" width="80" height="38" rx="0" fill="#fff4e6" stroke="#d9480f"/>
+    <text x="330" y="65" fill="#d9480f">Type</text>
+    <rect x="210" y="152" width="70" height="38" rx="0" fill="#e8f8fa" stroke="#0c8599"/>
+    <text x="245" y="177" fill="#0c8599">Nat</text>
+    <rect x="360" y="152" width="76" height="38" rx="0" fill="#e8f8fa" stroke="#0c8599"/>
+    <text x="398" y="177" fill="#0c8599">Bool</text>
+    <text x="195" y="285" fill="#1f2430">5</text>
+    <text x="275" y="285" fill="#1f2430">6</text>
+    <text x="365" y="285" fill="#1f2430">true</text>
+    <text x="458" y="285" fill="#1f2430">false</text>
+  </g>
+  <text x="280" y="320" text-anchor="middle" font-family="Noto Sans, sans-serif" font-size="13" fill="#5b6475">κάθε βέλος = «έχει τύπο» (ένα typing judgment) — όχι κληρονομικότητα</text>
+</svg>
