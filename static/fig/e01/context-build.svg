@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 250" width="720" font-family="Inter Tight, sans-serif">
+  <defs><marker id="cb-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker></defs>
+  <rect width="720" height="250" fill="#fff"/>
+  <g font-family="JetBrains Mono, monospace" font-size="14" text-anchor="middle">
+    <rect x="20" y="40" width="150" height="56" rx="0" fill="#ffffff" stroke="#111111"/>
+    <text x="95" y="64" fill="#1f2430">Γ₀ = ( )</text>
+    <text x="95" y="84" fill="#868e96" font-size="11">κενό</text>
+
+    <rect x="270" y="40" width="170" height="56" rx="0" fill="#ffffff" stroke="#111111"/>
+    <text x="355" y="64" fill="#1f2430">Γ₁ = (A : Sort 1)</text>
+
+    <rect x="530" y="40" width="170" height="56" rx="0" fill="#fdecea" stroke="#e5322d"/>
+    <text x="615" y="62" fill="#1f2430">Γ₂ = (A : Sort 1,</text>
+    <text x="615" y="82" fill="#1f2430">x : A)</text>
+  </g>
+  <path d="M172 68 H266" stroke="#868e96" stroke-width="2" marker-end="url(#cb-a)"/>
+  <path d="M442 68 H526" stroke="#868e96" stroke-width="2" marker-end="url(#cb-a)"/>
+  <g font-size="12" text-anchor="middle">
+    <text x="219" y="58" fill="#1f2430" font-family="JetBrains Mono, monospace">+ A : Sort 1</text>
+    <text x="484" y="58" fill="#1f2430" font-family="JetBrains Mono, monospace">+ x : A</text>
+  </g>
+  <g font-size="12">
+    <rect x="140" y="130" width="200" height="90" rx="0" fill="#e8f8fa" stroke="#0c8599"/>
+    <text x="152" y="152" fill="#0c8599" font-weight="700">ΕΛΕΓΧΟΣ</text>
+    <text x="152" y="174" fill="#1f2430">Είναι το Sort 1 τύπος;</text>
+    <text x="152" y="196" fill="#1f2430" font-family="JetBrains Mono, monospace">Γ₀ ⊢ Sort 1 : Sort 2</text>
+    <text x="152" y="212" fill="#868e96">κανόνας Sort ✓</text>
+    <path d="M219 128 V76" stroke="#0c8599" stroke-dasharray="4 3"/>
+
+    <rect x="400" y="130" width="200" height="90" rx="0" fill="#e8f8fa" stroke="#0c8599"/>
+    <text x="412" y="152" fill="#0c8599" font-weight="700">ΕΛΕΓΧΟΣ</text>
+    <text x="412" y="174" fill="#1f2430">Είναι το A τύπος;</text>
+    <text x="412" y="196" fill="#1f2430" font-family="JetBrains Mono, monospace">Γ₁ ⊢ A : Sort 1</text>
+    <text x="412" y="212" fill="#868e96">κανόνας Var ✓</text>
+    <path d="M484 128 V76" stroke="#0c8599" stroke-dasharray="4 3"/>
+  </g>
+</svg>

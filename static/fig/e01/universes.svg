@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 420" width="620" font-family="JetBrains Mono, monospace">
+  <defs><marker id="un-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker></defs>
+  <rect width="620" height="420" fill="#fff"/>
+  <g font-family="Inter Tight, sans-serif" font-size="12" fill="#868e96">
+    <text x="16" y="44">universes</text>
+    <text x="16" y="292">τύποι / προτάσεις</text>
+    <text x="16" y="382">τιμές / αποδείξεις</text>
+  </g>
+  <g stroke="#e3e5ea" stroke-dasharray="4 4"><path d="M10 250 H610"/><path d="M10 340 H610"/></g>
+  <g stroke="#868e96" stroke-width="1.6" fill="none" marker-end="url(#un-a)">
+    <path d="M330 92 V66"/><path d="M330 162 V136"/><path d="M330 232 V206"/>
+    <path d="M200 272 L310 208"/><path d="M330 272 V208"/><path d="M460 272 L350 208"/>
+    <path d="M160 362 L190 304"/><path d="M240 362 L210 304"/>
+    <path d="M330 362 V304"/><path d="M460 362 V304"/>
+  </g>
+  <g text-anchor="middle" font-size="15">
+    <rect x="285" y="28" width="90" height="34" rx="0" fill="#fff4e6" stroke="#d9480f"/><text x="330" y="50" fill="#d9480f">Sort 3</text>
+    <rect x="285" y="98" width="90" height="34" rx="0" fill="#fff4e6" stroke="#d9480f"/><text x="330" y="120" fill="#d9480f">Sort 2</text>
+    <rect x="285" y="168" width="90" height="34" rx="0" fill="#fff4e6" stroke="#d9480f"/><text x="330" y="190" fill="#d9480f">Sort 1</text>
+    <text x="330" y="16" fill="#868e96" font-size="13">⋮</text>
+    <rect x="150" y="272" width="100" height="34" rx="0" fill="#f3f0ff" stroke="#5f3dc4"/><text x="200" y="294" fill="#5f3dc4">Prop</text>
+    <rect x="290" y="272" width="80" height="34" rx="0" fill="#e8f8fa" stroke="#0c8599"/><text x="330" y="294" fill="#0c8599">Nat</text>
+    <rect x="420" y="272" width="80" height="34" rx="0" fill="#e8f8fa" stroke="#0c8599"/><text x="460" y="294" fill="#0c8599">Bool</text>
+    <text x="155" y="382" fill="#5f3dc4">True</text>
+    <text x="245" y="382" fill="#5f3dc4">False</text>
+    <text x="330" y="382" fill="#1f2430">5</text>
+    <text x="460" y="382" fill="#1f2430">true</text>
+  </g>
+  <text x="200" y="324" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="11" fill="#868e96">= Sort 0</text>
+  <text x="395" y="324" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="11" fill="#868e96">Type = Sort 1</text>
+</svg>
