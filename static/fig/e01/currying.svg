@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 200" width="720" font-family="JetBrains Mono, monospace">
+  <rect width="720" height="200" fill="#fff"/>
+  <g font-size="15">
+    <text x="30" y="50" fill="#1f2430">Nat.add</text>
+    <text x="250" y="50" fill="#1f2430">: <tspan fill="#e5322d">Nat →</tspan> Nat → Nat</text>
+    <text x="30" y="105" fill="#1f2430">Nat.add <tspan fill="#e5322d">5</tspan></text>
+    <text x="250" y="105" fill="#1f2430">: <tspan fill="#0c8599">Nat →</tspan> Nat</text>
+    <text x="30" y="160" fill="#1f2430">Nat.add 5 <tspan fill="#0c8599">6</tspan></text>
+    <text x="250" y="160" fill="#1f2430">: Nat</text>
+  </g>
+  <g font-family="Inter Tight, sans-serif" font-size="12" fill="#5b6475">
+    <text x="500" y="50">συνάρτηση 2 ορισμάτων</text>
+    <text x="500" y="105">το 5 «έφαγε» το 1ο βέλος</text>
+    <text x="500" y="160">το 6 «έφαγε» το 2ο βέλος</text>
+  </g>
+  <path d="M20 72 H700" stroke="#e3e5ea" stroke-dasharray="4 4"/>
+  <path d="M20 127 H700" stroke="#e3e5ea" stroke-dasharray="4 4"/>
+</svg>

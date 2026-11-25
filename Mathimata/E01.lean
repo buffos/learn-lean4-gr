@@ -7,6 +7,10 @@ import Mathimata.E01.M04
 import Mathimata.E01.M05
 import Mathimata.E01.M06
 import Mathimata.E01.M07
+import Mathimata.E01.M08
+import Mathimata.E01.M09
+import Mathimata.E01.M10
+import Mathimata.E01.M11
 
 open Verso.Genre Manual
 open Verso.Genre.Manual.InlineLean
@@ -43,3 +47,11 @@ _type checker_. Ξεκινάμε από το πιο βασικό ερώτημα 
 {include 2 Mathimata.E01.M06}
 
 {include 2 Mathimata.E01.M07}
+
+{include 2 Mathimata.E01.M08}
+
+{include 2 Mathimata.E01.M09}
+
+{include 2 Mathimata.E01.M10}
+
+{include 2 Mathimata.E01.M11}
