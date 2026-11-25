@@ -468,3 +468,6 @@ main nav.breadcrumb a { color: var(--ink-2); text-decoration: none; }
 main nav.breadcrumb a:hover { color: var(--accent); }
 main nav.breadcrumb .sep { color: var(--hair); }
 main nav.breadcrumb .here { color: var(--ink-3); }
+
+/* Μακριές γραμμές κώδικα: οριζόντια κύλιση αντί για κόψιμο */
+main pre, main .hl.lean.block, main code.hl.lean.block { overflow-x: auto; max-width: 100%; }

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 230" width="720" font-family="JetBrains Mono, monospace">
+  <defs>
+    <marker id="cp-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e5322d"/></marker>
+    <marker id="cp-g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2b8a3e"/></marker>
+  </defs>
+  <rect width="720" height="230" fill="#fff"/>
+  <text x="360" y="26" text-anchor="middle" font-size="14" fill="#1f2430">Γ = (y : Nat) ⊢ (λx. λy. x) y</text>
+  <path d="M360 44 V220" stroke="#e3e5ea" stroke-dasharray="4 4"/>
+  <g font-family="Inter Tight, sans-serif" font-size="12" font-weight="800">
+    <text x="180" y="66" text-anchor="middle" fill="#e5322d">✗ ΑΦΕΛΗΣ ΑΝΤΙΚΑΤΑΣΤΑΣΗ</text>
+    <text x="540" y="66" text-anchor="middle" fill="#2b8a3e">✓ ΜΕ ΜΕΤΟΝΟΜΑΣΙΑ</text>
+  </g>
+  <g font-size="26" text-anchor="middle">
+    <text x="180" y="130" fill="#1f2430">λ<tspan fill="#e5322d">y</tspan>. <tspan fill="#e5322d">y</tspan></text>
+    <text x="540" y="130" fill="#1f2430">λz. <tspan fill="#0c8599">y</tspan></text>
+  </g>
+  <path d="M196 112 C 196 86, 160 86, 160 108" fill="none" stroke="#e5322d" stroke-width="1.5" marker-end="url(#cp-r)"/>
+  <path d="M556 112 C 600 80, 660 80, 660 40" fill="none" stroke="#2b8a3e" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#cp-g)"/>
+  <g font-family="Inter Tight, sans-serif" font-size="12" fill="#5b6475" text-anchor="middle">
+    <text x="180" y="170">το y «πιάστηκε» από τον εσωτερικό binder</text>
+    <text x="180" y="190">→ ταυτοτική συνάρτηση</text>
+    <text x="540" y="170">το y δείχνει ακόμη στο εξωτερικό context</text>
+    <text x="540" y="190">→ σταθερή συνάρτηση</text>
+  </g>
+</svg>

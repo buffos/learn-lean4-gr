@@ -20,6 +20,12 @@ import Mathimata.E01.M17
 import Mathimata.E01.M18
 import Mathimata.E01.M19
 import Mathimata.E01.M20
+import Mathimata.E01.M21
+import Mathimata.E01.M22
+import Mathimata.E01.M23
+import Mathimata.E01.M24
+import Mathimata.E01.M25
+import Mathimata.E01.M26
 
 open Verso.Genre Manual
 open Verso.Genre.Manual.InlineLean
@@ -40,7 +46,7 @@ _type checker_. Ξεκινάμε από το πιο βασικό ερώτημα 
 Δεν θα χρησιμοποιήσουμε ακόμη _tactics_ ή αποδείξεις. Μας ενδιαφέρει ο
 πυρήνας: τι ακριβώς ελέγχεται, και με ποιους κανόνες.
 
-:::figure (src := "e01/roadmap.svg") (caption := "Ο χάρτης της ενότητας. Τα μαθήματα που έχουν δημοσιευτεί είναι τονισμένα.")
+:::figure (src := "e01/roadmap.svg") (caption := "Ο χάρτης της ενότητας: από τα θεμέλια μέχρι τα universes.")
 :::
 
 {include 2 Mathimata.E01.M01}
@@ -82,3 +88,15 @@ _type checker_. Ξεκινάμε από το πιο βασικό ερώτημα 
 {include 2 Mathimata.E01.M19}
 
 {include 2 Mathimata.E01.M20}
+
+{include 2 Mathimata.E01.M21}
+
+{include 2 Mathimata.E01.M22}
+
+{include 2 Mathimata.E01.M23}
+
+{include 2 Mathimata.E01.M24}
+
+{include 2 Mathimata.E01.M25}
+
+{include 2 Mathimata.E01.M26}
