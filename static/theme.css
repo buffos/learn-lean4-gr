@@ -443,3 +443,27 @@ main .content-wrapper {
   .header-title h1 { font-size: 0.9rem !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   #search-wrapper { max-width: 40vw; }
 }
+
+/* Κεντρικός πίνακας περιεχομένων: πάντα ανοιχτός, χωρίς βελάκι */
+#toc .split-toc.book > :not(:first-child) {
+  max-height: none !important;
+  margin-left: calc(var(--verso-toc-triangle-left-space) + calc(var(--verso-toc-triangle-width) / 2)) !important;
+}
+#toc .split-toc.book label.toggle-split-toc { pointer-events: none; }
+#toc .split-toc.book label.toggle-split-toc::before { visibility: hidden; }
+
+/* Breadcrumb πάνω από τον τίτλο */
+main nav.breadcrumb {
+  font-family: var(--verso-structure-font-family);
+  font-size: 0.8rem;
+  color: var(--ink-3);
+  margin: 1.2rem 0 -0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: baseline;
+}
+main nav.breadcrumb a { color: var(--ink-2); text-decoration: none; }
+main nav.breadcrumb a:hover { color: var(--accent); }
+main nav.breadcrumb .sep { color: var(--hair); }
+main nav.breadcrumb .here { color: var(--ink-3); }

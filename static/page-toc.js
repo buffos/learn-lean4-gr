@@ -3,8 +3,44 @@
 document.documentElement.lang = "el";
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Ελληνικός τίτλος για τον κεντρικό πίνακα περιεχομένων
+  document.querySelectorAll("#toc .split-toc.book .title span").forEach(s => {
+    if (s.textContent.trim() === "Table of Contents") s.textContent = "Περιεχόμενα";
+  });
   const main = document.querySelector("main .content-wrapper");
   if (!main) return;
+
+  // Breadcrumb: Αρχική / Ενότητα / (σελίδα), χτισμένο από τα split-tocs του μενού.
+  {
+    const crumbs = [];
+    const home = document.querySelector("header a.header-title");
+    if (home) crumbs.push({ href: home.getAttribute("href") || "./", text: "Αρχική" });
+    document.querySelectorAll("#toc .split-toc:not(.book) > .title a").forEach(a => {
+      crumbs.push({ href: a.getAttribute("href"), text: a.textContent.trim() });
+    });
+    const h1 = main.querySelector("h1");
+    if (h1 && crumbs.length > 0) {
+      const nav = document.createElement("nav");
+      nav.className = "breadcrumb";
+      nav.setAttribute("aria-label", "Πού βρίσκομαι");
+      const pageTitle = h1.textContent.replace(/🔗/g, "").trim();
+      crumbs.filter(c => c.text !== pageTitle).forEach(c => {
+        const a = document.createElement("a");
+        a.href = c.href;
+        a.textContent = c.text;
+        nav.appendChild(a);
+        const sep = document.createElement("span");
+        sep.className = "sep";
+        sep.textContent = "/";
+        nav.appendChild(sep);
+      });
+      const cur = document.createElement("span");
+      cur.className = "here";
+      cur.textContent = pageTitle;
+      nav.appendChild(cur);
+      if (nav.querySelectorAll("a").length > 0) h1.parentNode.insertBefore(nav, h1);
+    }
+  }
 
   const heads = [...main.querySelectorAll("section h2")].filter(h => h.id || h.closest("section[id]"));
   const here = location.pathname.replace(/\/index\.html$/, "/");
@@ -32,7 +68,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const id = h.id || h.closest("section[id]").id;
     const li = document.createElement("li");
     const a = document.createElement("a");
-    a.href = "#" + id;
+    // πλήρης διαδρομή: η σελίδα έχει <base href>, οπότε το σκέτο "#id" θα πήγαινε στην αρχική
+    a.href = location.pathname + location.search + "#" + encodeURIComponent(id);
+    a.addEventListener("click", e => {
+      e.preventDefault();
+      h.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", a.href);
+    });
     // κείμενο του τίτλου χωρίς αριθμούς/permalink
     const clone = h.cloneNode(true);
     clone.querySelectorAll(".permalink-widget, .number").forEach(e => e.remove());
