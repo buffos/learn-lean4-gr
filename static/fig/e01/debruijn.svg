@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 270" width="720" font-family="JetBrains Mono, monospace">
+  <defs>
+    <marker id="db-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e5322d"/></marker>
+  </defs>
+  <rect width="720" height="270" fill="#fff"/>
+  <text x="360" y="22" text-anchor="middle" font-size="13" fill="#5b6475">(A : Sort 1) → (x : A) → A</text>
+  <g stroke="#868e96" stroke-width="1.5" fill="none">
+    <path d="M220 62 L130 122"/><path d="M220 62 L360 122"/>
+    <path d="M360 150 L280 206"/><path d="M360 150 L470 206"/>
+  </g>
+  <g font-size="13" text-anchor="middle">
+    <rect x="160" y="36" width="120" height="28" rx="0" fill="#fff4e6" stroke="#d9480f"/><text x="220" y="55" fill="#d9480f">forallE (A)</text>
+    <rect x="80" y="122" width="100" height="28" rx="0" fill="#ffffff" stroke="#111111"/><text x="130" y="141" fill="#1f2430">Sort 1</text>
+    <rect x="300" y="122" width="120" height="28" rx="0" fill="#fff4e6" stroke="#d9480f"/><text x="360" y="141" fill="#d9480f">forallE (x)</text>
+    <rect x="230" y="206" width="100" height="28" rx="0" fill="#fdecea" stroke="#e5322d"/><text x="280" y="225" fill="#e5322d">bvar 0</text>
+    <rect x="420" y="206" width="100" height="28" rx="0" fill="#fdecea" stroke="#e5322d"/><text x="470" y="225" fill="#e5322d">bvar 1</text>
+  </g>
+  <g fill="none" stroke="#e5322d" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#db-a)">
+    <path d="M232 214 C 120 200, 120 90, 162 56"/>
+    <path d="M520 214 C 640 180, 600 40, 282 46"/>
+  </g>
+  <g font-family="Inter Tight, sans-serif" font-size="11" fill="#5b6475">
+    <text x="60" y="256">binders σε ισχύ: A  →  0 βήματα ως το A</text>
+    <text x="410" y="256">binders σε ισχύ: x, A  →  1 βήμα ως το A</text>
+  </g>
+</svg>

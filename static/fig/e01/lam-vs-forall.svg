@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" width="720" font-family="JetBrains Mono, monospace">
+  <rect width="720" height="220" fill="#fff"/>
+  <text x="180" y="24" text-anchor="middle" font-size="13" fill="#5b6475">fun (x : Nat) => x</text>
+  <text x="540" y="24" text-anchor="middle" font-size="13" fill="#5b6475">(x : Nat) → Nat</text>
+  <text x="360" y="110" text-anchor="middle" font-size="22" fill="#1f2430">:</text>
+  <g stroke="#868e96" stroke-width="1.5" fill="none">
+    <path d="M180 66 L110 130"/><path d="M180 66 L250 130"/>
+    <path d="M540 66 L470 130"/><path d="M540 66 L610 130"/>
+  </g>
+  <g font-size="13" text-anchor="middle">
+    <rect x="125" y="40" width="110" height="28" rx="0" fill="#ebfbee" stroke="#2b8a3e"/><text x="180" y="59" fill="#2b8a3e">lam (x)</text>
+    <rect x="70" y="130" width="80" height="28" rx="0" fill="#f3f0ff" stroke="#5f3dc4"/><text x="110" y="149" fill="#5f3dc4">Nat</text>
+    <rect x="205" y="130" width="90" height="28" rx="0" fill="#fdecea" stroke="#e5322d"/><text x="250" y="149" fill="#e5322d">bvar 0</text>
+
+    <rect x="485" y="40" width="110" height="28" rx="0" fill="#fff4e6" stroke="#d9480f"/><text x="540" y="59" fill="#d9480f">forallE (x)</text>
+    <rect x="430" y="130" width="80" height="28" rx="0" fill="#f3f0ff" stroke="#5f3dc4"/><text x="470" y="149" fill="#5f3dc4">Nat</text>
+    <rect x="570" y="130" width="80" height="28" rx="0" fill="#f3f0ff" stroke="#5f3dc4"/><text x="610" y="149" fill="#5f3dc4">Nat</text>
+  </g>
+  <g font-family="Inter Tight, sans-serif" font-size="11" fill="#868e96">
+    <text x="110" y="180" text-anchor="middle">τύπος ορίσματος</text>
+    <text x="250" y="180" text-anchor="middle">body: ΤΙΜΗ</text>
+    <text x="470" y="180" text-anchor="middle">τύπος ορίσματος</text>
+    <text x="610" y="180" text-anchor="middle">body: ΤΥΠΟΣ</text>
+  </g>
+  <text x="360" y="210" text-anchor="middle" font-family="Inter Tight, sans-serif" font-size="12" fill="#5b6475">η συνάρτηση  :  ο τύπος της</text>
+</svg>

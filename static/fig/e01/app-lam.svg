@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 240" width="720" font-family="JetBrains Mono, monospace">
+  <rect width="720" height="240" fill="#fff"/>
+  <text x="360" y="22" text-anchor="middle" font-size="13" fill="#5b6475">(fun (x : Nat) => x) 5</text>
+  <g stroke="#868e96" stroke-width="1.5" fill="none">
+    <path d="M300 62 L210 120"/><path d="M300 62 L420 120"/>
+    <path d="M210 148 L140 200"/><path d="M210 148 L280 200"/>
+  </g>
+  <g font-size="13" text-anchor="middle">
+    <rect x="255" y="36" width="90" height="28" rx="0" fill="#fdecea" stroke="#e5322d"/><text x="300" y="55" fill="#e5322d">app</text>
+    <rect x="155" y="120" width="110" height="28" rx="0" fill="#ebfbee" stroke="#2b8a3e"/><text x="210" y="139" fill="#2b8a3e">lam (x)</text>
+    <rect x="380" y="120" width="80" height="28" rx="0" fill="#ffffff" stroke="#111111"/><text x="420" y="139" fill="#1f2430">lit 5</text>
+    <rect x="95" y="200" width="90" height="28" rx="0" fill="#f3f0ff" stroke="#5f3dc4"/><text x="140" y="219" fill="#5f3dc4">const Nat</text>
+    <rect x="240" y="200" width="80" height="28" rx="0" fill="#ffffff" stroke="#111111"/><text x="280" y="219" fill="#1f2430">bvar 0</text>
+  </g>
+  <g font-size="12" fill="#2b8a3e">
+    <text x="352" y="55">: Nat          ← App: domain Nat = τύπος του 5 ✓</text>
+    <text x="40" y="139">Nat → Nat :</text>
+    <text x="468" y="139">: Nat</text>
+    <text x="40" y="219">Sort 1 :</text>
+    <text x="328" y="219">: Nat</text>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" font-family="JetBrains Mono, monospace">
+  <rect width="720" height="280" fill="#fff"/>
+  <text x="170" y="22" text-anchor="middle" font-size="12" fill="#5b6475">let x : Nat := 5; Nat.succ x</text>
+  <text x="530" y="22" text-anchor="middle" font-size="12" fill="#5b6475">(fun (x : Nat) => Nat.succ x) 5</text>
+  <path d="M360 36 V270" stroke="#e3e5ea" stroke-dasharray="4 4"/>
+  <g stroke="#868e96" stroke-width="1.5" fill="none">
+    <path d="M170 62 L70 130"/><path d="M170 62 L170 130"/><path d="M170 62 L270 130"/>
+    <path d="M270 158 L220 214"/><path d="M270 158 L320 214"/>
+    <path d="M530 62 L460 120"/><path d="M530 62 L650 120"/>
+    <path d="M460 148 L410 190"/><path d="M460 148 L520 190"/>
+    <path d="M520 218 L480 248"/><path d="M520 218 L570 248"/>
+  </g>
+  <g font-size="12" text-anchor="middle">
+    <rect x="120" y="36" width="100" height="28" rx="0" fill="#fff4e6" stroke="#d9480f"/><text x="170" y="55" fill="#d9480f">letE (x)</text>
+    <rect x="30" y="130" width="80" height="28" rx="0" fill="#f3f0ff" stroke="#5f3dc4"/><text x="70" y="149" fill="#5f3dc4">Nat</text>
+    <rect x="135" y="130" width="70" height="28" rx="0" fill="#ffffff" stroke="#111111"/><text x="170" y="149" fill="#1f2430">lit 5</text>
+    <rect x="235" y="130" width="70" height="28" rx="0" fill="#fdecea" stroke="#e5322d"/><text x="270" y="149" fill="#e5322d">app</text>
+    <rect x="170" y="214" width="100" height="28" rx="0" fill="#f3f0ff" stroke="#5f3dc4"/><text x="220" y="233" fill="#5f3dc4">Nat.succ</text>
+    <rect x="285" y="214" width="70" height="28" rx="0" fill="#ffffff" stroke="#111111"/><text x="320" y="233" fill="#1f2430">bvar 0</text>
+
+    <rect x="495" y="36" width="70" height="28" rx="0" fill="#fdecea" stroke="#e5322d"/><text x="530" y="55" fill="#e5322d">app</text>
+    <rect x="410" y="120" width="100" height="28" rx="0" fill="#ebfbee" stroke="#2b8a3e"/><text x="460" y="139" fill="#2b8a3e">lam (x)</text>
+    <rect x="615" y="120" width="70" height="28" rx="0" fill="#ffffff" stroke="#111111"/><text x="650" y="139" fill="#1f2430">lit 5</text>
+    <rect x="375" y="190" width="70" height="28" rx="0" fill="#f3f0ff" stroke="#5f3dc4"/><text x="410" y="209" fill="#5f3dc4">Nat</text>
+    <rect x="485" y="190" width="70" height="28" rx="0" fill="#fdecea" stroke="#e5322d"/><text x="520" y="209" fill="#e5322d">app</text>
+    <rect x="430" y="248" width="100" height="28" rx="0" fill="#f3f0ff" stroke="#5f3dc4"/><text x="480" y="267" fill="#5f3dc4">Nat.succ</text>
+    <rect x="545" y="248" width="70" height="28" rx="0" fill="#ffffff" stroke="#111111"/><text x="580" y="267" fill="#1f2430">bvar 0</text>
+  </g>
+  <g font-family="Inter Tight, sans-serif" font-size="11" fill="#868e96" text-anchor="middle">
+    <text x="70" y="176">type</text><text x="170" y="176">value</text><text x="300" y="176">body</text>
+  </g>
+</svg>

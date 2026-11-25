@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 220" width="720" font-family="JetBrains Mono, monospace">
+  <defs><marker id="da-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#868e96"/></marker></defs>
+  <rect width="720" height="220" fill="#fff"/>
+  <g font-size="13">
+    <text x="20" y="40" fill="#5b6475">g          :</text>
+    <text x="150" y="40" fill="#1f2430"><tspan fill="#e5322d">(A : Sort 1) →</tspan> <tspan fill="#0c8599">(B : Sort 1) →</tspan> (<tspan fill="#e5322d">A</tspan> → <tspan fill="#0c8599">B</tspan>) → <tspan fill="#e5322d">A</tspan> → <tspan fill="#0c8599">B</tspan></text>
+
+    <text x="20" y="110" fill="#5b6475">g Nat      :</text>
+    <text x="150" y="110" fill="#1f2430"><tspan fill="#0c8599">(B : Sort 1) →</tspan> (<tspan fill="#e5322d" font-weight="700">Nat</tspan> → <tspan fill="#0c8599">B</tspan>) → <tspan fill="#e5322d" font-weight="700">Nat</tspan> → <tspan fill="#0c8599">B</tspan></text>
+
+    <text x="20" y="180" fill="#5b6475">g Nat Bool :</text>
+    <text x="150" y="180" fill="#1f2430">(<tspan fill="#e5322d" font-weight="700">Nat</tspan> → <tspan fill="#0c8599" font-weight="700">Bool</tspan>) → <tspan fill="#e5322d" font-weight="700">Nat</tspan> → <tspan fill="#0c8599" font-weight="700">Bool</tspan></text>
+  </g>
+  <g stroke="#868e96" stroke-width="1.5" marker-end="url(#da-a)"><path d="M90 52 V92"/><path d="M90 122 V162"/></g>
+  <g font-family="Inter Tight, sans-serif" font-size="12">
+    <text x="100" y="78" fill="#e5322d">A := Nat</text>
+    <text x="100" y="148" fill="#0c8599">B := Bool</text>
+  </g>
+</svg>

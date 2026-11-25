@@ -109,7 +109,6 @@ tag := "1-9-trees"
 Πώς γράφονται οι `Nat → Bool → Nat` και `(Nat → Bool) → Nat` με αυτή τη σημειογραφία;
 
 ::::solution
-Η απάντηση που δόθηκε ήταν *σωστή* και στα δύο:
 
 ```
 Nat → Bool → Nat     =  forallE(Nat, forallE(Bool, Nat))

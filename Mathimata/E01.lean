@@ -11,6 +11,15 @@ import Mathimata.E01.M08
 import Mathimata.E01.M09
 import Mathimata.E01.M10
 import Mathimata.E01.M11
+import Mathimata.E01.M12
+import Mathimata.E01.M13
+import Mathimata.E01.M14
+import Mathimata.E01.M15
+import Mathimata.E01.M16
+import Mathimata.E01.M17
+import Mathimata.E01.M18
+import Mathimata.E01.M19
+import Mathimata.E01.M20
 
 open Verso.Genre Manual
 open Verso.Genre.Manual.InlineLean
@@ -55,3 +64,21 @@ _type checker_. Ξεκινάμε από το πιο βασικό ερώτημα 
 {include 2 Mathimata.E01.M10}
 
 {include 2 Mathimata.E01.M11}
+
+{include 2 Mathimata.E01.M12}
+
+{include 2 Mathimata.E01.M13}
+
+{include 2 Mathimata.E01.M14}
+
+{include 2 Mathimata.E01.M15}
+
+{include 2 Mathimata.E01.M16}
+
+{include 2 Mathimata.E01.M17}
+
+{include 2 Mathimata.E01.M18}
+
+{include 2 Mathimata.E01.M19}
+
+{include 2 Mathimata.E01.M20}
