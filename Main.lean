@@ -12,7 +12,7 @@ def config : RenderConfig where
   htmlDepth := 2
   extraCss := {theme}
   extraJs := {⟨include_str "static/page-toc.js"⟩}
-  sourceLink := some "https://github.com/OWNER/learn-lean4-gr"
-  issueLink := some "https://github.com/OWNER/learn-lean4-gr/issues"
+  sourceLink := some "https://github.com/buffos/learn-lean4-gr"
+  issueLink := some "https://github.com/buffos/learn-lean4-gr/issues"
 
 def main := manualMain (%doc Mathimata) (config := config)
